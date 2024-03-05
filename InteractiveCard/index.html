@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./style/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Interactive card details form</title>
+	</head>
+
+	<body class="flex md:justify-center md:items-center min-h-screen">
+		<div class="container flex flex-col md:flex-row gap-y-[5rem]">
+			<div class="relative grow">
+				<img
+					src="./images/bg-main-desktop.png"
+					alt="desktop image"
+					class="desktop-img"
+				/>
+				<img
+					src="./images/bg-main-mobile.png"
+					alt="desktop image"
+					class="mobile-img"
+				/>
+
+				<div class="front-card">
+					<img src="./images/bg-card-front.png" alt="front card image"/>
+					<div class="card-details">
+						<div class="mb-5">
+							<img src="./images/card-logo.svg" alt="card logo" class="max-md:h-[2.5rem]"/>
+						</div>
+						<div class="card-text-number">
+							<p class="num1">0000</p>
+							<p class="num2">0000</p>
+							<p class="num3">0000</p>
+							<p class="num4">0000</p>
+						</div>
+						<div class="flex justify-between w-full">
+							<p class="card-text-name">Jane Appleseed</p>
+							<p class="monthYear-text">00/00</p>
+						</div>
+					</div>
+				</div>
+				<div class="back-card">
+					<img src="./images/bg-card-back.png" alt="back card image">
+					<p class="cvc-text">000</p>
+				</div>
+			</div>
+			<div class="flex md:items-center justify-start grow md:justify-center max-md:px-5">
+				<form>
+					<label for="" class="uppercase block">cardholder name</label>
+					<input
+						type="text"
+						placeholder="eg. Jane Appleseed"
+						id="cardholder-name"
+					/>
+					<p class="error name">Can't be blank</p>
+
+					<label for="" class="uppercase block mt-5">card number</label>
+					<input
+						type="text"
+						placeholder="eg. 1234 5678 9123 0000"
+						id="card-number"
+						maxlength="19"
+					/>
+					<p class="error number">Can't be blank</p>
+					<div class="flex gap-x-3">
+						<div class="relative">
+							<label for="" class="uppercase block mt-5"
+								>exp. date (mm/yy)</label
+							>
+							<div class="flex md:w-52">
+								<input
+									type="number"
+									min="1"
+									max="12"
+									class="mr-2"
+									placeholder="MM"
+									id="month"
+								/>
+								<input
+									type="number"
+									min="1990"
+									placeholder="YY"
+									id="year"
+									class=""
+								/>
+							</div>
+							<p class="error absolute month">Can't be blank</p>
+							<p class="error absolute right-0 year">Can't be blank</p>
+						</div>
+						<div class="relative">
+							<label for="" class="uppercase block mt-5">cvc</label>
+							<input type="number" placeholder="e.g 123" id="cvc" />
+							<p class="error absolute cvc">Can't be blank</p>
+						</div>
+					</div>
+					<button class="btn-confirm primary-btn" type="submit">Confirm</button>
+				</form>
+				<div class="sucess hide">
+					<img src="./images/icon-complete.svg" alt="check">
+					<h1 class="text-[2rem] text-veryDarkViolet font-medium">THANK YOU!</h1>
+					<p class="text-darkGrayishViolet text-[17px]">We've added your card details</p>
+					<button class="continue primary-btn">Continue</button>
+				</div>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>
