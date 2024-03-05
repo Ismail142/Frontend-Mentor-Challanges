@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Frontend Mentor | Age calculator app</title>
+		<link rel="stylesheet" href="style/style.css" />
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	</head>
+	<body
+		class="bg-lightGray text-secondary flex justify-center items-center h-[90vh] font-poppins"
+	>
+		<div
+			class="container max-w-[375px] sm:min-w-[600px] sm:max-w-[700px] p-5 bg-[#ffffff] mx-4 rounded-lg rounded-br-[5rem]"
+		>
+			<form id="form">
+				<div class="head-input flex gap-2 mb-16 sm:w-[80%]">
+					<div class="form-input">
+						<label
+						
+							class="text-smokeGray text-xs tracking-widest font-bold"
+							>DAY</label
+						>
+						<input
+							type="text"
+							name="day"
+							class="block h-11 sm:h-16 rounded-md mt-2 w-[80%] border border-lightGray text-lg sm:text-2xl p-4 font-bold focus:border-primary focus:outline-none"
+							,
+							placeholder="DD"
+						/>
+						<p class="day error hidden">hello</p>
+					</div>
+
+					<div class="form-input">
+						<label
+							class="text-smokeGray text-xs font-bold tracking-widest"
+							>MONTH</label
+						>
+						<input
+							type="text"
+							name="month"
+							class="block h-11 sm:h-16 rounded-md mt-2 w-[80%] border border-lightGray text-lg sm:text-2xl p-4 font-bold focus:border-primary focus:outline-none"
+							,
+							placeholder="MM"
+						/>
+						<p class="day error hidden">hello</p>
+					</div>
+					<div class="form-input">
+						<label
+			
+							class="text-smokeGray text-xs tracking-widest font-bold"
+							>YEAR</label
+						>
+						<input
+							type="text"
+							name="day"
+							class="block h-11 sm:h-16 rounded-md mt-2 w-[90%] border border-lightGray text-lg sm:text-2xl p-4 font-bold focus:border-primary focus:outline-none"
+							,
+							placeholder="YYYY"
+						/>
+						<p class="day error hidden">hello</p>
+					</div>
+				</div>
+				<div class="divider relative mb-16">
+					<div class="border"></div>
+					<input
+						type="image"
+						src="assets/images/icon-arrow.svg"
+						alt="Submit"
+						class="submit p-4 bg-primary rounded-full h-14 sm:h-20 hover:bg-secondary absolute -top-7 max-[639px]:left-[50%] max-[639px]:-translate-x-[50%] sm:right-0 sm:-top-10 cursor-pointer"
+					/>
+				</div>
+			</form>
+	
+			<div class="display mb-10">
+				<h1 class="text-5xl sm:text-[4rem] font-extrabold italic mb-4">
+					<span class="year-text text-primary italic mr-1">- -</span> years
+				</h1>
+				<h1 class="text-5xl font-extrabold italic sm:text-[4rem] mb-4">
+					<span class="month-text text-primary italic l mr-1">- -</span> months
+				</h1>
+				<h1 class="text-5xl font-extrabold italic sm:text-[4rem] mb-4">
+					<span class="day-text text-primary italic mr-1">- -</span> days
+				</h1>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
