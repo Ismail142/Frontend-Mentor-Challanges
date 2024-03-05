@@ -1,0 +1,211 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+	html {
+		font-family: "Public Sans", sans-serif;
+	}
+}
+.section-container {
+	@apply md:max-w-[70%] mx-auto max-w-[85%];
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.btn-primary {
+	@apply p-3 px-8  rounded-full text-white
+   bg-gradient-to-r from-limeGreen to-brightCyan text-sm
+   duration-200 transition-all inline-block;
+}
+
+.heading-primary {
+	@apply md:text-[3.5rem] leading-[1.15] font-light text-darkBlue text-[2.5rem]
+   text-center md:text-left;
+}
+
+.heading-tertiary {
+	@apply text-[1.7rem] md:text-[2rem] font-light text-darkBlue text-center md:text-left;
+}
+
+.heading-p {
+	@apply max-w-md text-grayishBlue my-4 mb-6 text-center md:text-left;
+}
+
+/* Header */
+#header {
+	z-index: 1;
+	@apply p-5 lg:p-4 bg-white fixed top-0 right-0 left-0;
+}
+.nav {
+	@apply flex justify-between items-center;
+}
+
+.nav-links li {
+	border-bottom: 2px solid transparent;
+	@apply inline-block mx-2 text-grayishBlue text-sm py-3 duration-200;
+}
+
+.nav-mobile {
+	@apply hidden absolute w-screen h-screen bg-darkBlue top-[3.75rem]
+	left-0  justify-center items-start p-8 bg-opacity-50;
+}
+
+.nav-mobile.active {
+	@apply flex;
+}
+
+.nav-links-mobile {
+	@apply bg-white text-darkBlue w-80 rounded-md;
+}
+.nav-links-mobile li {
+	@apply text-center my-5 hover:text-limeGreen duration-200;
+}
+
+.nav-links li:hover {
+	border-image: linear-gradient(
+		to right,
+		hsl(136, 65%, 51%),
+		hsl(192, 70%, 51%)
+	);
+	border-image-slice: 1;
+	@apply text-darkBlue;
+}
+
+.btn-primary:hover {
+	background-image: linear-gradient(
+		to right,
+		hsl(136, 65%, 60%),
+		hsl(192, 70%, 60%)
+	);
+}
+
+.mobile-btn {
+	@apply lg:hidden cursor-pointer;
+}
+
+.desktop {
+	@apply hidden lg:block;
+}
+
+/* Hero */
+.hero-flex {
+	@apply flex flex-col items-center md:items-start mt-[25rem] md:mt-0;
+}
+
+.intro-img {
+	z-index: 0;
+	@apply md:h-[52.5rem] w-[58rem] absolute -right-[17rem] 
+	-top-[9.5rem] 2xl:w-[70rem] 2xl:-right-[15rem]
+	bg-[url('../images/bg-intro-mobile.svg')] h-[30rem] 
+	bg-no-repeat bg-cover bg-center md:bg-[url('../images/bg-intro-desktop.svg')];
+}
+.img-mockup {
+	@apply absolute md:-top-10 -top-20 md:-right-[8rem] max-h-[55rem] right-0
+	2xl:right-0;
+}
+
+/* Choose us */
+.description-header {
+	@apply text-xl text-darkBlue;
+}
+.col p {
+	@apply md:max-w-[17rem] max-w-md text-grayishBlue text-center md:text-left;
+}
+
+.flex-container {
+	@apply flex flex-col md:flex-row justify-between my-20
+   gap-y-10 flex-wrap gap-x-4;
+}
+
+.col {
+	@apply flex flex-col items-center space-y-4 md:items-start md:max-w-[12rem] lg:max-w-lg;
+}
+
+/* Latest Articles */
+.news-container {
+	@apply flex flex-col md:flex-row my-16 gap-x-4 gap-y-6
+	md:flex-wrap xl:flex-nowrap max-sm:items-center;
+}
+
+.news-col {
+	@apply flex flex-col bg-white shadow-md rounded-md
+   cursor-pointer max-w-sm md:max-w-[15rem] lg:max-w-lg;
+}
+
+.news-col img {
+	@apply rounded-t-md h-full;
+}
+
+.content {
+	@apply p-6;
+}
+.author {
+	@apply text-xs text-grayishBlue my-2 duration-200;
+}
+.news-header {
+	@apply text-darkBlue text-xl my-2 hover:text-limeGreen;
+}
+.news-description {
+	@apply text-grayishBlue;
+}
+
+/* footer */
+footer {
+	@apply text-lightGrayishBlue;
+}
+
+.footer-flex {
+	@apply flex flex-col lg:flex-row items-center lg:items-start
+   gap-y-5;
+}
+
+.footer-col-1 {
+	@apply flex flex-col gap-y-11 items-center;
+}
+.footer-col-2 {
+	@apply flex grow justify-between lg:ml-32 gap-y-5
+   flex-col lg:flex-row items-center lg:items-start;
+}
+.footer-links {
+	@apply flex gap-x-20 flex-col md:flex-row gap-y-5 max-sm:w-full;
+}
+
+.links-group {
+	@apply flex flex-col gap-y-5 max-sm:items-center;
+}
+.links-group a {
+	@apply hover:text-limeGreen duration-200;
+}
+
+.copyright {
+	@apply flex flex-col items-center;
+}
+
+.social-links li {
+	@apply inline-block mx-2 cursor-pointer;
+}
+
+.social-links li:hover .ficon {
+	@apply fill-limeGreen duration-200;
+}
+
+/* Query */
+@media (min-width: 767px) and (max-width: 1024px) {
+	.img-mockup {
+		right: 4rem;
+		max-height: 50rem;
+		height: 50rem;
+	}
+	.intro-img {
+		@apply w-[72rem];
+	}
+	.hero-flex {
+		margin-top: 40rem;
+  }
+  .mobile-btn {
+	@apply scale-150
+  }
+}
