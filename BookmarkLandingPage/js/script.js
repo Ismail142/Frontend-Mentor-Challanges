@@ -24,7 +24,7 @@ function observeCallback(entries,observer) {
 
       const interval = setInterval(()=>{
         count+=1400;
-        joined.textContent = count.toLocaleString();
+        joined.textContent = count.toLocaleString()+"+";
         count >= 35000 && clearInterval(interval);
       },50)
 
@@ -56,7 +56,7 @@ faqs.forEach((faq,i)=>{
 })
 
 const observer  = new IntersectionObserver(observeCallback,{threshold:1})
-observer.observe(joined)
+// observer.observe(joined)
 
 btn.addEventListener('click', ()=>{
   btn.classList.toggle('open');

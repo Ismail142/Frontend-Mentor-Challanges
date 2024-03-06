@@ -15,8 +15,14 @@
   @apply -rotate-180
 }
 
-.content.active {
-  @apply md:h-20 h-40
+.content {
+  transition: max-height 0.3s ease;
+  @apply max-h-0 overflow-hidden;
+}
+
+.content.active{
+  transition: max-height 0.4s ease;
+  @apply max-h-48;
 }
 
 .ficon:hover {
