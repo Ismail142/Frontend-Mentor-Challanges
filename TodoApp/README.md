@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Live Url](https://todo-app-ismail.vercel.app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Ismail142/Frontend-Mentor-Challanges/tree/main/TodoApp)
+- Live Site URL: [live site URL](https://todo-app-ismail.vercel.app)
 
 ## My process
 
