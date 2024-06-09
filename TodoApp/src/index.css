@@ -1,0 +1,26 @@
+@import  "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+html {
+  @apply font-josefin text-sm md:text-base;
+}
+
+.container {
+  @apply max-w-xl;
+}
+
+.check {
+  background:  linear-gradient(150deg,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  @apply cursor-pointer hover:text-veryDarkBlue dark:hover:text-darkLightGrayishBlueHover;
+}
+.filter-active {
+  @apply text-brightBlue hover:text-brightBlue;
+}
